@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<!-- standard header for each page -->
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Wildland Cottage Hire</title>
+	<body>
+		<!-- container holds all page content -->
+		<div id="container">
+			<!-- nav bar that goes across the whole page, has two levels to it  -->
+			<div id="navHeader">
+				<a href="index.html">
+					<!-- logo which acts as a homepage link -->
+					<img alt="Wildland Cottage Logo" class="logo" src="images/header.png"/>
+				</a>
+				<nav>
+					<ul class="navBorder">
+						<li><a class="blue" href="contactus.html">01279 616717</a></li>
+						<li><a href="contactus.html">Contact Us</a></li>
+						<li><a href="reviews.html">Reviews</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<ul>
+						<li><a href="where.html">Where to find us</a></li>
+						<li><a href="kingsbridge.html">Kingsbridge</a></li>
+						<li><a href="local.html">Local area</a></li>
+						<li><a href="visitus.html">Visit Us</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- blue block that goes across width of page -->
+			<div id="lineBlock">
+			</div>
+			<div id="content">
+				<!-- Page content, contact details and a contact form -->
+				<div id ="innerContent">
+					<h1>Contact Us</h1>
+					<hr>
+					<!-- table that shows contact details -->
+					<table>
+						<tr>
+							<th>Our address</th>
+							<td>
+								Matthews Cottage,<br>
+								Thorley Street,<br>
+								Kingsbridge,<br>
+								TQ7 6HG <br>
+								<a href="where.html">Directions and Map ></a>
+							</td>
+						</tr>
+						<tr>
+							<th>Telephone</th>
+							<td>
+								01279 616717
+							</td>
+						</tr>
+						<tr>
+							<th>Office Hours</th>
+							<td>								
+								Monday - Friday 9am to 8pm<br>
+								Saturday 9am to 5pm<br>
+								Sunday 10am to 5pm<br><br>
+								We are closed from the 24th to 26th of December and on the 1st January, 16th April, and the 17th April.
+							</td>
+						</tr>
+					</table>
+					<h2>Contact Form</h2>
+					<p>
+						We aim to reply to your messages within 24 hours.<br>
+						Please use this form for enquiries or questions. Bookings must be made by phone only.
+					</p>
+					<!-- a contact form that allows the user to send a message, email is validated -->
+					<form id="reviewsForm" name="contact" onsubmit="return validateForm();" method="post">
+						<input id="userName" type="text" maxlength="30" size="20"
+						placeholder="Please enter your name..." required/>
+						<br>
+						<input type="text" name="email" placeholder="Plesae enter your email address..." maxlength="30" size="30">
+						<br>
+						<textarea id="textField" rows="10" maxlength="200" placeholder="Please enter your message..." required></textarea>
+						<br>
+						<button class="formButton" type="submit"> Submit </button>
+						<button class="formButton" type="reset"> Reset </button>
+					</form>
+				</div>
+			</div>
+			<!-- footer with links to some pages -->
+			<footer>
+				<h1 class="footerImages">wildland</h1>
+				<img class="footerImages" src="images/travelAdvisor.jpg" alt="Travel Advisor 2016"/>
+				<h1 class="footerImages">cottages</h1>
+				<br>
+				<a class="footerImages" href="privacy.html">Privacy policy</a>
+				<a class="footerImages" href="index.html">Home</a>
+				<a class="footerImages" href="contactus.html">Contact us</a>
+				<br>
+				<p>
+					© Wildland Cottages 2016
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

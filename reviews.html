@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<!-- standard header for each page -->
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="reviews.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Wildland Cottage Hire</title>
+	</head>
+	<body onload="fetchReviews(); form();">
+		<!-- container holds all page content -->
+		<div id="container">
+			<!-- nav bar that goes across the whole page, has two levels to it  -->
+			<div id="navHeader">
+				<a href="index.html">
+					<!-- logo which acts as a homepage link -->
+					<img alt="Wildland Cottage Logo" class="logo" src="images/header.png"/>
+				</a>
+				<nav>
+					<ul class="navBorder">
+						<li><a class="blue" href="contactus.html">01279 616717</a></li>
+						<li><a href="contactus.html">Contact Us</a></li>
+						<li><a href="reviews.html">Reviews</a></li>
+					</ul>
+				</nav>
+				<nav>
+					<ul>
+						<li><a href="where.html">Where to find us</a></li>
+						<li><a href="kingsbridge.html">Kingsbridge</a></li>
+						<li><a href="local.html">Local area</a></li>
+						<li><a href="visitus.html">Visit Us</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- blue block that goes across width of page -->
+			<div id="lineBlock">
+			</div>
+			<div id="content">	
+				<!-- Page content, a reviews page where a user can write a review -->
+				<div id="innerContent">
+					<h1>Reviews</h1>
+					<hr>
+					<!-- if pressed, the user can write a review in the form which appears -->
+					<input type="button" class="formButton" id="showForm" value="Write a review"/>
+					<!-- form that allows the user to input their name and the review and then submit it -->
+					<div id="test">
+					<form id="reviewsForm">
+						<h2>Your Review</h2>
+						<p>
+							Please right any reviews about the cottage below in this form.<br>
+							If you would like to contact us directly then please go to the <a href="contactus.html">contact us</a> page of the website.
+						</p>
+						<input id="namebox" type="text" maxlength="32" size="20"
+						placeholder="Please enter your name..." />
+						<br>
+						<textarea id="txt1" rows="6" placeholder="Please enter your comment or review here..."></textarea>
+						<br>
+						<!-- buttons to submit form -->
+						<button class="formButton" onclick="saveComment()"> Post Review </button>
+						<button class="formButton" onclick="clearComment()"> Clear Review Boxes </button>
+					</form>
+				</div>
+					<h2>Reviews</h2>
+					<!-- displays old reviews that have been stored in local storage -->
+					<div id="oldReviews"></div>
+				</div>
+			</div>
+			<!-- footer with links to some pages -->
+			<footer>
+				<h1 class="footerImages">wildland</h1>
+				<img class="footerImages" src="images/travelAdvisor.jpg" alt="Travel Advisor 2016"/>
+				<h1 class="footerImages">cottages</h1>
+				<br>
+				<a class="footerImages" href="privacy.html">Privacy policy</a>
+				<a class="footerImages" href="index.html">Home</a>
+				<a class="footerImages" href="contactus.html">Contact us</a>
+				<br>
+				<p>
+					© Wildland Cottages 2016
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

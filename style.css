@@ -1,0 +1,357 @@
+body {
+    background-color: white;
+	height: 100%;
+	font-family: Arial;
+	margin:0;
+	padding: 0;
+}
+
+/* holds all content on the page */
+#container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+/* places the navigation bar in the center */
+#navHeader {
+	width: 90%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+/* sets the blue bar underneath the navigation so that goes across the whole screen */
+#lineBlock {
+	height: 20px;
+	background-color: #15639a;
+	width: 100%;
+	left: 0;
+	margin: 0;
+	position: absolute;
+}
+
+/* holds the div that has page content in a slightly greyed out box */
+#content {
+	background-color: rgb(233,233,233);
+	overflow: hidden;
+	width: 70%;
+	padding: 0px 0px 20px 0px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 30px;
+	height: 100%;
+}
+
+/* holds the main site content with padding on the sides */
+#innerContent {
+	padding: 40px 50px;
+	color: #15639a;
+	height: 100%;
+}
+
+#innerContent h1 {
+	font-size: 30px;
+}
+
+#innerContent h2 {
+	font-size: 22px;
+}
+
+#innerContent h3 {
+	font-size: 20px;
+	font-style: italic;
+}
+
+/* makes sure the white hr line goes across the whole page */
+#innerContent hr {
+    display: block;
+    border: 0;
+    border-top: 4px solid white;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+/* setting up nav bar */
+nav {
+	margin: 0;
+	overflow: hidden;
+}
+
+/* styles the list that forms the nav */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* styles the elements of the list */
+nav li {
+    float: right;
+	list-style-type: none;
+}
+
+/* styles the link that is in each list element */
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* creates the triangle used for active pages */
+.active {
+	background: white url(triangle.jpg) no-repeat center bottom;
+}
+
+/* styles the main logo */
+.logo {
+	float: left;
+	position: relative;
+} 
+
+/* styles the grey line underneath the top nav bar */
+.navBorder {
+	border-bottom: 1px solid #D5D5D5;
+	float: right;
+	font-size: 14px;
+}
+
+/* allows some text to be set as blue */
+.blue {
+	color: #15639a;
+}
+
+/* styles the popup window that appears when an image is clicked in te gallery */
+.popup {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+    overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+}
+
+/* styles the content of the popup so that images display correctly */
+.popup-content {
+    margin: auto;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* styles the captions for the popup images */
+#imgCaption {
+    width: 100%;
+	position:absolute;
+	transform: translate(-50%, 0);
+	left: 50%;
+	bottom: 0;
+    color: white;
+    height: 100px;
+	font-size: 20px;
+	font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+}
+
+/* sets the size of the images in the gallery, prior to them being clicked on */
+.gallery {
+	width: 20%;
+	margin: 5px;
+	display: inline-block;
+	cursor: pointer;
+	float: none;
+	vertical-align: middle;
+}
+
+/* when hovering over an image, its opacity is reduced */
+.gallery:hover {
+	opacity: 0.7;
+}
+
+/* sets the style for the street map which when pressed pop ups as a larger image*/
+.map {
+	width: 161px;
+	height: 226px;
+	cursor: pointer;
+}
+
+/* sets height of street map */
+#popMap {
+	height: 95%;
+}
+
+ /* styles the close button for the image pop up */
+.closeButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* makes sure the close button on the popup displays a pointer cursor */
+span{
+	cursor:pointer;
+}
+
+/* styles the text area of the review form */
+#reviewsForm textarea{
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    resize: none;
+	font-family: Arial;	
+}
+
+/* styles the input fields of the review form */
+#reviewsForm input {
+	border-radius: 5px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	border: 2px solid #ccc;
+	background-color: #f8f8f8;
+}
+
+/* when the review form fields are hovered over, the border is highlighted */
+#reviewsForm input:focus {
+    border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+/* style buttons used in forms */
+.formButton {
+    background-color: #15639a;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 10px 2px;
+    cursor: pointer;	
+}
+
+/* style the figures which hold images and captions */
+figure {
+    display: inline-block;
+	float: right;
+	margin: 0;
+	padding: 0px 10px 10px 10px;
+}
+
+/* allows figures to float left of paragraphs */
+.leftFigure {
+	float: left;
+	padding-left: 0px;
+}
+
+/* styles the captions of each figure */
+figure figcaption {
+	font-size: 12px;
+	text-align: center;
+	padding: 0px 10px 10px 0px;
+}
+
+/* clears the page of all floats so that a new paragraph can be below a floating image */
+.clear {
+	clear: both;
+}
+
+/* allows text to sit to the left of a larger right float figure */
+.paraImage p  {
+	width: 70%;
+	float: left;
+}
+
+/* styles tables used on the website */
+table {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+/* styles the table headers, or in this case, the left hand column */
+table th {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: text-top;
+}
+
+/* styles all other columns of the table */
+table td {
+	padding-left: 100px;
+	padding-bottom: 20px;
+	line-height: 24px;
+	width: 270px;
+}
+
+/* styles certain columns of a table */
+.column {
+	width: 33%;
+	padding-left: 20px;
+}
+
+/* styles all images found in the slideshow div */
+#slideshow img {
+	width: 100%;
+}
+
+/* styles the whole slideshow div for the homepage */
+#slideshow {
+	width: 100%;
+	height: 540px;
+	margin-top: 20px;
+}
+
+/* keeps the homepage position based on its ancestor  */
+#slideshow > div {
+	position: absolute;
+}
+
+/* sets large images to have a percentage width */
+.homepageImg {
+	width: 100%;
+}
+
+.left {
+	float: left;
+	width: 46%;
+}
+
+.right {
+	padding-top: 20px;
+	float: right;
+}
+
+/* allows the footer displays in a line block format */
+.footerImages {
+	display: inline-block;
+	float: none;
+	padding: 5px;
+	vertical-align: middle;
+	font-family: "Arial Rounded MT", Arial, Helvetica, sans-serif;
+}
+
+/* makes sure that visited links in the footer stay the same colour as non-visited */
+footer  a:visited {
+	color: #15639a;
+}
+
+/* styles the footer */
+footer {
+   width: 100%;
+   bottom: 20px;
+   background-color: white;
+   color: #15639a;
+   text-align: center;
+}
